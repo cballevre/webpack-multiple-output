@@ -29,15 +29,13 @@ function getConfig(targetName) {
     }
   }
 
-  /* if(targetName === 'browser') {
-    config.plugins.push( new CopyPlugin(
-      {
-        patterns: [
-          { from: './src/manifest.webapp', to: __dirname + '/build/' }
-        ],
-      }
-    ))
-  } */
+  if(targetName === 'browser') {
+    config.plugins.push(new CopyPlugin({
+      patterns: [
+        { from: './src/manifest.webapp', to: __dirname + '/build/' }
+      ],
+    }))
+  }
 
   return config
 }
